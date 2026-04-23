@@ -1,0 +1,8 @@
+{
+  "name": "gnome-fuzzy-clock-gb",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}

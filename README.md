@@ -2,6 +2,8 @@
 
 A GNOME Shell extension that replaces the panel time with an opinionated British English fuzzy time while keeping the existing date menu behaviour. No matter what your locale is - this part of it will behave as if you're in en_GB.
 
+![The extension, showing the current time and date](screenshot.png "Extension screenshot")
+
 ## Scope
 
 - Supports GNOME Shell `45` through `50`

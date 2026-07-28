@@ -108,7 +108,7 @@ function roundDateToFuzzyTime(date) {
     return rounded;
 }
 
-function buildDateLabel(date, {showDate = true, showWeekday = false, locale} = {}) {
+function buildDateLabel(date, {showDate = true, showWeekday = false, locale = 'en-GB'} = {}) {
     const options = {};
 
     if (showWeekday)

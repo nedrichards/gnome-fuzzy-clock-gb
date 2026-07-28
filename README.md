@@ -1,6 +1,8 @@
 # Fuzzy Clock GB
 
-A GNOME Shell extension that replaces the panel time with an opinionated British English fuzzy time while keeping the existing date menu behaviour. No matter what your locale is - this part of it will behave as if you're in en_GB.
+A GNOME Shell extension that replaces the panel time with an opinionated British
+English fuzzy time while keeping the existing date menu behaviour. No matter
+what your locale is, this part of it will behave as if you're in `en-GB`.
 
 ![The extension, showing the current time and date](screenshot.png "Extension screenshot")
 
@@ -8,6 +10,9 @@ A GNOME Shell extension that replaces the panel time with an opinionated British
 
 - Supports GNOME Shell `45` through `50`
 - Changes only the panel label text
+
+Support for GNOME Shell 45 through 50 is intentional. Before adding another
+release to `metadata.json`, verify the extension against that GNOME release.
 
 ## Install
 
@@ -18,7 +23,8 @@ For a local checkout install, run:
 gnome-extensions enable fuzzy-clock-gb@nedrichards
 ```
 
-If GNOME Shell does not pick it up immediately, restart the shell on X11 or log out and back in on Wayland.
+If GNOME Shell does not pick it up immediately, restart the shell on X11 or log
+out and back in on Wayland.
 
 To build a distributable zip instead:
 
@@ -28,7 +34,7 @@ To build a distributable zip instead:
 
 ## Development
 
-Run the formatter tests with:
+Run lint, syntax checks, and unit tests with:
 
 ```sh
 npm test
@@ -53,4 +59,9 @@ Create a distributable zip with:
 ```
 
 ---
-*Co authored with Codex, and although I don't think it would fall foul of the policy you're unlikely to find this on [extensions.gnome.org](https://gjs.guide/extensions/review-guidelines/review-guidelines.html#extensions-must-not-be-ai-generated) because being respectful is important.*
+*Co authored with Codex, and although I don't think it would fall foul of the
+policy you're unlikely to find this on
+[extensions.gnome.org][review-guidelines]
+because being respectful is important.*
+
+[review-guidelines]: https://gjs.guide/extensions/review-guidelines/review-guidelines.html

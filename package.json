@@ -3,6 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test"
+    "lint": "eslint .",
+    "check:js": "node --check extension.js && node --check fuzzyTime.js && node --check eslint.config.js && node --check tests/fuzzy-time.test.mjs",
+    "check:shell": "bash -n scripts/*.sh",
+    "test:unit": "node --test",
+    "test": "npm run lint && npm run check:js && npm run check:shell && npm run test:unit"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "eslint-config-gnome": "git+https://gitlab.gnome.org/World/javascript/eslint-config-gnome.git#c479d059e8d9ea99c3b53c2ea43abf7fdb05eb51",
+    "globals": "^16.5.0"
   }
 }

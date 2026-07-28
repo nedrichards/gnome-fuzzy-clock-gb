@@ -29,9 +29,10 @@ test('buildPanelLabel places the fuzzy time before the date', () => {
     const date = new Date('2026-04-23T12:33:00');
 
     assert.equal(buildPanelLabel(date, {showDate: false, showWeekday: false}), 'Twenty-five To One');
-    assert.equal(buildPanelLabel(date, {showDate: false, showWeekday: true, locale: 'en-GB'}), 'Twenty-five To One on Thursday');
-    assert.equal(buildPanelLabel(date, {showDate: true, showWeekday: false, locale: 'en-GB'}), 'Twenty-five To One on 23 April');
-    assert.equal(buildPanelLabel(date, {showDate: true, showWeekday: true, locale: 'en-GB'}), 'Twenty-five To One on Thursday 23 April');
+    assert.equal(buildPanelLabel(date, {showDate: false, showWeekday: true}), 'Twenty-five To One on Thursday');
+    assert.equal(buildPanelLabel(date, {showDate: true, showWeekday: false}), 'Twenty-five To One on 23 April');
+    assert.equal(buildPanelLabel(date, {showDate: true, showWeekday: true}), 'Twenty-five To One on Thursday 23 April');
+    assert.equal(buildPanelLabel(date, {showDate: true, showWeekday: true, locale: 'en-US'}), 'Twenty-five To One on Thursday, April 23');
 });
 
 test('buildPanelLabel keeps weekday-only output clean', () => {
@@ -45,7 +46,7 @@ test('buildPanelLabel rolls the date forward when fuzzy time crosses midnight', 
     const late = new Date('2026-04-23T23:58:00');
     const early = new Date('2026-04-24T00:03:00');
 
-    assert.equal(buildPanelLabel(late, {showDate: true, showWeekday: false, locale: 'en-GB'}), 'Midnight on 24 April');
-    assert.equal(buildPanelLabel(late, {showDate: true, showWeekday: true, locale: 'en-GB'}), 'Midnight on Friday 24 April');
+    assert.equal(buildPanelLabel(late, {showDate: true, showWeekday: false}), 'Midnight on 24 April');
+    assert.equal(buildPanelLabel(late, {showDate: true, showWeekday: true}), 'Midnight on Friday 24 April');
     assert.equal(buildPanelLabel(early, {showDate: true, showWeekday: true, locale: 'en-GB'}), 'Five Past Midnight on Friday 24 April');
 });

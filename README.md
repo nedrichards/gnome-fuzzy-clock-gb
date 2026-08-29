@@ -8,10 +8,10 @@ what your locale is, this part of it will behave as if you're in `en-GB`.
 
 ## Scope
 
-- Supports GNOME Shell `45` through `50`
+- Supports GNOME Shell `45` through `51`
 - Changes only the panel label text
 
-Support for GNOME Shell 45 through 50 is intentional. Before adding another
+Support for GNOME Shell 45 through 51 is intentional. Before adding another
 release to `metadata.json`, verify the extension against that GNOME release.
 
 ## Install

@@ -2,6 +2,14 @@
   "uuid": "fuzzy-clock-gb@nedrichards",
   "name": "Fuzzy Clock GB",
   "description": "Replaces the GNOME panel time with British English fuzzy time while keeping the date menu intact.",
-  "shell-version": ["45", "46", "47", "48", "49", "50"],
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51"
+  ],
   "url": "https://github.com/nedrichards/gnome-fuzzy-clock-gb"
 }

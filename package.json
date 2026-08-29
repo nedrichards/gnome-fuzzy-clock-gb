@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "lint": "eslint .",
-    "check:js": "node --check extension.js && node --check fuzzyTime.js && node --check eslint.config.js && node --check tests/fuzzy-time.test.mjs",
+    "check:js": "node --check extension.js && node --check fuzzyTime.js && node --check eslint.config.js && node --check tests/*.mjs",
     "check:shell": "bash -n scripts/*.sh",
     "test:unit": "node --test",
     "test": "npm run lint && npm run check:js && npm run check:shell && npm run test:unit"

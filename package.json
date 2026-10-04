@@ -12,6 +12,6 @@
   "devDependencies": {
     "eslint": "^9.39.5",
     "eslint-config-gnome": "git+https://gitlab.gnome.org/World/javascript/eslint-config-gnome.git#c479d059e8d9ea99c3b53c2ea43abf7fdb05eb51",
-    "globals": "^16.5.0"
+    "globals": "^17.13.0"
   }
 }

@@ -65,3 +65,5 @@ policy you're unlikely to find this on
 because being respectful is important.*
 
 [review-guidelines]: https://gjs.guide/extensions/review-guidelines/review-guidelines.html
+
+See [Maintenance](docs/maintenance.md) for dependency and CI package checks.

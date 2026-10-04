@@ -1,0 +1,46 @@
+name: Check
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: npm
+      - name: Install extension packaging tool
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gnome-shell
+      - run: npm ci
+      - run: npm test
+      - name: Package extension
+        run: ./scripts/package.sh
+      - name: Upload tested extension package
+        id: upload
+        uses: actions/upload-artifact@v7
+        with:
+          name: gnome-fuzzy-clock-gb-${{ github.sha }}
+          path: dist/*.shell-extension.zip
+          if-no-files-found: error
+          retention-days: 14
+      - name: Summarize package
+        env:
+          ARTIFACT_URL: ${{ steps.upload.outputs.artifact-url }}
+        run: |
+          {
+            echo "Tested checkout: $GITHUB_SHA"
+            echo "Download: $ARTIFACT_URL"
+            echo 'Retention: 14 days'
+          } >> "$GITHUB_STEP_SUMMARY"

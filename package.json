@@ -6,6 +6,7 @@
     "lint": "eslint .",
     "check:js": "node --check extension.js && node --check fuzzyTime.js && node --check eslint.config.js && node --check tests/*.mjs",
     "check:shell": "bash -n scripts/*.sh",
+    "check:package": "./scripts/package.sh && python3 scripts/check-package.py dist/fuzzy-clock-gb@nedrichards.shell-extension.zip",
     "test:unit": "node --test",
     "test": "npm run lint && npm run check:js && npm run check:shell && npm run test:unit"
   },

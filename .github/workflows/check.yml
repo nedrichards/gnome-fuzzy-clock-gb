@@ -26,7 +26,7 @@ jobs:
       - name: Install extension packaging tool
         run: |
           sudo apt-get update
-          sudo apt-get install -y gnome-shell
+          sudo apt-get install -y gnome-shell gjs
       - run: npm ci
       - name: Load pure extension modules with native GJS
         run: |
@@ -99,7 +99,7 @@ jobs:
       - name: Install extension packaging tool
         run: |
           sudo apt-get update
-          sudo apt-get install -y gnome-shell
+          sudo apt-get install -y gnome-shell gjs
       - run: npm ci
       - name: Load pure extension modules with native GJS
         run: |

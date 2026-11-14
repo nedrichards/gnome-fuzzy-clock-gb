@@ -67,3 +67,5 @@ because being respectful is important.*
 [review-guidelines]: https://gjs.guide/extensions/review-guidelines/review-guidelines.html
 
 See [Maintenance](docs/maintenance.md) for dependency and CI package checks.
+
+For hosted checks and artifacts, see [continuous integration](docs/CI.md).
